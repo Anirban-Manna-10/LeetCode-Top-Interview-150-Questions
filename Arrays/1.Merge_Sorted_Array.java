@@ -4,16 +4,6 @@
 //To accommodate this, nums1 has a length of m + n, where the first m elements denote the elements that should be merged, and the last n elements are set to 0 and should be ignored. nums2 has a length of n.
 
 class Solution {
-    public static void main(String[] args) {
-        int[] nums1 = {1,2,3,0,0,0};
-        int[] nums2 = {2,5,6};
-        int m = 3 , n = nums2.length;
-        Solution a = new Solution();
-        a.merge(nums1, m , nums2, n);
-        for(int i = 0 ; i < nums1.length ; i++){
-            System.out.print(nums1[i]+", ");
-        }
-    }
     public void merge(int[] nums1, int m, int[] nums2, int n) {
         int i = m - 1;
         int j = n - 1;
@@ -29,6 +19,17 @@ class Solution {
                 k--;
                 j--;
             }
+        }
+    }
+    //Main Function
+    public static void main(String[] args) {
+        int[] nums1 = {1,2,3,0,0,0};
+        int[] nums2 = {2,5,6};
+        int m = 3 , n = nums2.length;
+        Solution a = new Solution();
+        a.merge(nums1, m , nums2, n);
+        for(int i = 0 ; i < nums1.length ; i++){
+            System.out.print(nums1[i]+", ");
         }
     }
 }
